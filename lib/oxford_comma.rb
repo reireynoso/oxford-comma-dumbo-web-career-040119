@@ -1,7 +1,8 @@
 def oxford_comma(array)
-  if array.size > 2 
-     string = ""
-     string = "#{array.join(", ")}"
+  string = ""
+  if array.size > 2
+     last = array.shift
+     string = "#{array.join(", ")}and #{last}"
   else
     return array.join(" and ")
   end
